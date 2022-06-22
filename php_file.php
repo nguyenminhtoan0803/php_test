@@ -1,22 +1,30 @@
-<!doctype html>
-<html lang="en">
-<body>
-<?PHP
-$filename = "D://tmp//php8.1.txt";
-$file = fopen("D:\\tmp\\php8.1.txt", "r");
 
-if(!$file){
-    echo "file not found";
+<html>
+
+<head>
+    <title>Writing a file using PHP</title>
+</head>
+
+<body>
+
+<?php
+$filename = "./tmp/php8.1.txt";
+$file = fopen( $filename, "r" );
+
+if( $file == false ) {
+    echo ( "Error in opening file" );
     exit();
 }
 
-$filesize = filesize($filename);
-$filetext = fread($file, $filesize);
+$filesize = filesize( $filename );
+$filetext = fread( $file, $filesize );
 
-fclose($file);
+fclose( $file );
 
 echo ( "File size : $filesize bytes" );
-echo ( "<pre>$filetext</pre>" );
+echo ( "$filetext" );
+echo("file name: $filename");
 ?>
+
 </body>
 </html>
