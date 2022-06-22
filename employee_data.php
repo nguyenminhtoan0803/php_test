@@ -4,15 +4,19 @@
     $sql = 'SELECT emp_id, emp_name FROM employee';
     $result = mysqli_query($connection, $sql);
 
-    if(!$result){
+    if (!$result) {
         die('could not get data' . $this->result->mysqli_error);
     }
 
-    while($row = mysqli_fetch_array($result, MYSQLI_NUM)){
-        echo "EMP ID :{$row['emp_id']}  <br> ".
-            "EMP NAME :{$row['emp_name']}  <br> ";
+    
+    while ($row = mysqli_fetch_array($result, MYSQLI_NUM)) {
+
+        $myJSON = json_encode($row);
+
+        echo $myJSON;
     }
 
     echo "Fetched data successfully\n";
-mysqli_free_result($result);
-  mysqli_close($connection);
+    mysqli_free_result($result);
+    mysqli_close($connection);
+?>
