@@ -2,12 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="2fcca971-44e3-4ebe-88bc-f3f7a69bfbd9" name="Localhost" url="http://localhost/test">
-        <fileTransfer rootFolder="/home/toan/projects/test" accessType="SFTP" host="localhost" port="22" sshConfigId="97d5c33e-bdb0-4f65-8260-5ce09015b3b1" sshConfig="toan@localhost:22 password">
-          <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
-          </advancedOptions>
-        </fileTransfer>
+      <webServer id="59a1fd43-5004-485b-9f5e-c15bcfbf72e8" name="Local" url="http://localhost/php_test">
+        <fileTransfer mountedRoot="C:\xampp\htdocs\php_test" accessType="MOUNT" port="0" />
       </webServer>
     </option>
   </component>

@@ -1,23 +1,31 @@
 them vao file php.ini
-    [XDebug]
-    xdebug.remote_enable=1
-    xdebug.remote_autostart=1
-    zend_extension="C:\xampp\php\ext\php_xdebug.dll" tai ve them vao c:\xampp\php\ext\
-    xdebug.idekey=VSCODE
-    xdebug.remote_connect_back = 1
-    xdebug.start_with_request=yes
-    xdebug.discover_client_host=true
-    xdebug.remote_cookie_expire_time = 3600
-    xdebug.remote_handler = dbgp
-    xdebug.mode = debug
+[XDebug]
+xdebug.default_enable=1
+xdebug.remote_enable=1
+xdebug.remote_autostart=1
+zend_extension="C:\xampp\php\ext\php_xdebug.dll"
+xdebug.idekey=VSCODE
+xdebug.remote_connect_back = 0
+xdebug.remote_cookie_expire_time = 3600
+xdebug.remote_handler = dbgp
+xdebug.mode = debug
+xdebug.remote_host=localhost
+xdebug.remote_port=9004
+xdebug.remote_log="C:/xampp/php/tmp/logxdebug.log"
+error_reporting=E_ALL
+display_startup_errors=1
+display_errors=1
 
 tai postman chay api test php    
     GET, POST, PUT
     xdebug_session_start them vao param
-
+    XDEBUG_SESSION_START=VSCODE
 cai xdebug cho vscode
     ctrl+shift+p->open setting json
         "php.validate.executablePath": "C:\\xampp\\php\\php.exe",
         "php.executablePath": "C:\\xampp\\php\\php.exe",
         "php.debug.executablePath": "C:\\xampp\\php\\php.exe"
+
+run debug vscode 
+    listen for xdebug
     

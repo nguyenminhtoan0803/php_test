@@ -6,6 +6,8 @@
 
 <body>
 <?php
+    require_once 'connect_mysql.php';
+    
     if(isset($_POST['add'])) {
 
 
@@ -20,7 +22,7 @@
 
         $sql = "INSERT INTO employee ". "(emp_name,emp_address, emp_salary) ". "VALUES('$emp_name','$emp_address',$emp_salary)";
 
-        $retval = mysqli_query( $connection, $sql);
+        $retval = mysqli_query($connection, $sql);
 
         if(! $retval ) {
             die('Could not enter data: ' .  $this->retval->mysqli_error());
@@ -31,45 +33,6 @@
         mysqli_close($connection);
     }else {
     ?>
-
-    <form method = "post" action = "<?php $_SERVER['PHP_SELF'] ?>">
-        <table width = "400" border="0" cellspacing = "1"
-               cellpadding = "2">
-
-            <tr>
-                <td width = "100">Employee Name</td>
-                <td><input name = "emp_name" type = "text"
-                           id = "emp_name"></td>
-            </tr>
-
-            <tr>
-                <td width = "100">Employee Address</td>
-                <td><input name = "emp_address" type = "text"
-                           id = "emp_address"></td>
-            </tr>
-
-            <tr>
-                <td width = "100">Employee Salary</td>
-                <td><input name = "emp_salary" type = "text"
-                           id = "emp_salary"></td>
-            </tr>
-
-            <tr>
-                <td width = "100"> </td>
-                <td> </td>
-            </tr>
-
-            <tr>
-                <td width = "100"> </td>
-                <td>
-                    <input name = "add" type = "submit" id = "add"
-                           value = "Add Employee">
-                </td>
-            </tr>
-
-        </table>
-    </form>
-
     <?php
     }
 ?>
