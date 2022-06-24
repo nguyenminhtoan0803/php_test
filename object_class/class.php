@@ -41,6 +41,10 @@
         return 'ClassA';
     }
 
+    $b = new ('Class' . 'B');
+
+    $d = new (ClassD::class);
+    
     var_dump(new (getSomeClass()));
     var_dump(new ('Class' . 'B'));
     var_dump(new ('Class' . 'C'));
