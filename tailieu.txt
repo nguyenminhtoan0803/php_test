@@ -85,3 +85,66 @@ php8.1-zip/focal,now 8.1.7-1+ubuntu20.04.1+deb.sury.org+1 amd64 [installed]
 php8.1-zmq/focal,now 1.1.3-23+ubuntu20.04.1+deb.sury.org+10 amd64 [installed]
 php8.1-zstd/focal,now 0.11.0-1+ubuntu20.04.1+deb.sury.org+3 amd64 [installed]
 php8.1/focal,now 8.1.7-1+ubuntu20.04.1+deb.sury.org+1 all [installed]
+
+
+<?php
+$GLOBALS['$results'];
+function create_description($title, $description, $tags)
+{
+    $array = array();
+    $array[] = $title;
+    $array[] = $description;
+    $array[] = $tags;
+    return $array;
+}
+function getData(){
+    if (isset($_POST['submit'])) {
+        /**
+         * @param $title
+         * @param $description
+         * @param $tags
+         * @return array
+         */
+        $description = $_POST['description'] ?? '';
+        $title = $_POST['title'] ?? '';
+        $tags = $_POST['tags'] ?? '';
+        
+        if ($description && $title && $tags) {
+            $results = create_description($title, $description, $tags);
+        }
+    }
+
+}
+?>
+<html>
+<head>
+    <title>Youtube description</title>
+    <link rel="stylesheet" href="../src/template/style.css">
+</head>
+<body>
+<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+    <div>
+        <input type="text" name="title" id="title" placeholder="Title" />
+    </div>
+    <div>
+        <textarea name="description" id="description" cols="30" rows="10" placeholder="Description"></textarea>
+    </div>
+    <div>
+        <input type="text" name="tags" id="tags" placeholder="tags" />
+    </div>
+    <div>
+        <button type="submit" name="submit" id="submit">
+            Create description
+        </button>
+    </div>
+</form>
+
+<div class="descriptioncontents">
+    <?php
+        getData();
+
+    ?>
+</div>
+
+</body>
+</html>
