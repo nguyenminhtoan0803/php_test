@@ -87,49 +87,91 @@ php8.1-zstd/focal,now 0.11.0-1+ubuntu20.04.1+deb.sury.org+3 amd64 [installed]
 php8.1/focal,now 8.1.7-1+ubuntu20.04.1+deb.sury.org+1 all [installed]
 
 
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Youtube description</title>
-    <link rel="stylesheet" href="../template/css/style.css">
-    <script type='text/javascript' src="../template/js/script.js" ></script>
-    <?php include_once "../view/include/boostrap_include.php" ?>
-</head>
-<body>
-<div class="main-content">
-    <?php include_once "../view/include/header.php" ?>
-    <br>
-    <div class="container">
-        <div class="row mb-3">
-            <label class="col-sm-2 col-form-label">Title</label>
-            <div class="col-sm-4">
-                <input type="text" class="form-control" id="title" name="title" placeholder="Title">
-            </div>
-        </div>
-        <div class="form-outline">
-            <textarea class="form-control" id="description" name="description" placeholder="Description" rows="4"></textarea>
-            <label class="form-label" for="">Description</label>
-        </div>
-        <div class="form-outline">
-            <textarea class="form-control" id="homepage_url" name="homepage_url" class="homepage_url" placeholder="HomePage Url" rows="4"></textarea>
-            <label class="form-label" for="">HomePage Url</label>
-        </div>
-        <div class="form-outline">
-            <textarea class="form-control" id="product_url" name="product_url" class="product_url" placeholder="Product URL" rows="4"></textarea>
-            <label class="form-label" for="">Product URL</label>
-        </div>
-        <div class="form-outline">
-            <textarea class="form-control" id="topic" name="topic" class="topic" placeholder="Topic" rows="4"></textarea>
-            <label class="form-label" for="">Topic</label>
-        </div>
-        <div class="form-outline">
-            <textarea class="form-control" id="keyword" name="keyword" class="keyword" placeholder="Keyword" rows="4"></textarea>
-            <label class="form-label" for="">Keyword</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Create</button>
-    </div>
-    <br>
-    <?php include_once "../view/include/footer.php" ?>
-</div>
-</body>
-</html>
+"ext-dom": "*",
+		"ext-zip": "*",
+		"ext-posix": "*",
+		"ext-mysqli": "*",
+		"ext-pcntl": "*",
+		"ext-zlib": "*",
+		"ext-curl": "*",
+		"ext-json": "*",
+		"ext-libxml": "*",
+		"ext-memcache": "*",
+		"ext-redis": "*",
+		"symfony/symfony": "*",
+		"ccampbell/chromephp": "*",
+		"league/csv": "*",
+		"paquettg/php-html-parser": "*",
+		"tuupola/base62": "*",
+		"guzzlehttp/guzzle": "*",
+		"paragonie/certainty": "*",
+		"league/flysystem-eventable-filesystem": "*",
+		"monolog/monolog": "*",
+		"exeu/apai-io": "*",
+		"google/apiclient": "*",
+		"laminas/laminas-db": "*",
+		"laminas/laminas-authentication": "*",
+		"laminas/laminas-barcode": "*",
+		"laminas/laminas-captcha": "*",
+		"laminas/laminas-code": "*",
+		"laminas/laminas-config": "*",
+		"laminas/laminas-crypt": "*",
+		"laminas/laminas-di": "*",
+		"laminas/laminas-diactoros": "*",
+		"laminas/laminas-dom": "*",
+		"laminas/laminas-escaper": "*",
+		"laminas/laminas-feed": "*",
+		"laminas/laminas-file": "*",
+		"laminas/laminas-filter": "*",
+		"laminas/laminas-form": "*",
+		"laminas/laminas-http": "*",
+		"laminas/laminas-hydrator": "*",
+		"laminas/laminas-i18n": "*",
+		"laminas/laminas-i18n-resources": "*",
+		"laminas/laminas-json": "*",
+		"laminas/laminas-json-server": "*",
+		"laminas/laminas-loader": "*",
+		"laminas/laminas-log": "*",
+		"laminas/laminas-math": "*",
+		"laminas/laminas-mime": "*",
+		"laminas/laminas-modulemanager": "*",
+		"laminas/laminas-mvc-form": "*",
+		"laminas/laminas-mvc-i18n": "*",
+		"laminas/laminas-mvc-plugin-fileprg": "*",
+		"laminas/laminas-mvc-plugin-flashmessenger": "*",
+		"laminas/laminas-mvc-plugin-identity": "*",
+		"laminas/laminas-mvc-plugin-prg": "*",
+		"laminas/laminas-mvc-plugins": "*",
+		"laminas/laminas-navigation": "*",
+		"laminas/laminas-paginator": "*",
+		"laminas/laminas-permissions-acl": "*",
+		"laminas/laminas-permissions-rbac": "*",
+		"laminas/laminas-progressbar": "*",
+		"laminas/laminas-psr7bridge": "*",
+		"laminas/laminas-router": "*",
+		"laminas/laminas-serializer": "*",
+		"laminas/laminas-server": "*",
+		"laminas/laminas-session": "*",
+		"laminas/laminas-soap": "*",
+		"laminas/laminas-stratigility": "*",
+		"laminas/laminas-tag": "*",
+		"laminas/laminas-text": "*",
+		"laminas/laminas-uri": "*",
+		"laminas/laminas-validator": "*",
+		"laminas/laminas-view": "*",
+		"laminas/laminas-xml2json": "*",
+		"laminas/laminas-xmlrpc": "*",
+		"laminas/laminas-xml": "*",
+		"mongodb/mongodb": "*",
+		"phalcon/cli-options-parser": "*",
+		"wyrihaximus/html-compress": "*",
+		"doctrine/doctrine-module": "^5.0",
+		"laminas/laminas-cache-storage-adapter-memory": "^2.0",
+		"laminas/laminas-cache-storage-adapter-filesystem": "^2.0",
+		"laminas/laminas-cache-storage-adapter-redis": "^2.0",
+		"laminas/laminas-cache-storage-adapter-memcached": "^2.0",
+		"laminas/laminas-cache-storage-adapter-ext-mongodb": "^2.0",
+		"laminas/laminas-cache-storage-adapter-session": "^2.0",
+		"laminas/laminas-cache-storage-adapter-memcache": "^1.1",
+		"nikic/fast-route": "^1.3",
+		"ext-mongodb": "*"
