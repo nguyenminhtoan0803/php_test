@@ -177,3 +177,6 @@ php8.1/focal,now 8.1.7-1+ubuntu20.04.1+deb.sury.org+1 all [installed]
 		"ext-mongodb": "*"
 		
 	https://adambrown.info/p/wp_hooks/hook#variableHooks
+	https://caolan.github.io/async/v3/
+
+	https://www.npmjs.com/package/fibers
